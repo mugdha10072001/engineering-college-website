@@ -21,7 +21,7 @@ Copy both links
 You
 Paste them into the submission template below
 Submission template
-Live Website Link: https://YOUR-PROJECT.vercel.app
+Live Website Link: https://zippy-blini-272cc6.netlify.app/
 GitHub Repository Link: https://github.com/mugdha10072001/engineering-college-website
 Technologies used
 React, TypeScript, Vite, Tailwind CSS v4 (custom design tokens for colors and fonts), Lucide React icons, Google Fonts (Archivo and Cormorant Garamond), Git and GitHub for version control, and Vercel for hosting.
