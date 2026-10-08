@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+/* =====================================================
+   DESIGN TOKENS
+   Each token becomes a Tailwind class automatically:
+   --color-primary   -> bg-primary / text-primary / border-primary
+   --color-secondary -> bg-secondary / text-secondary
+   --font-serif      -> font-serif
+===================================================== */
+@theme {
+  /* Colors */
+  --color-primary: #2a3d30;
+  --color-primary-dark: #1f3025;
+  --color-secondary: #cfa353;
+  --color-dark: #151515;
+  --color-light: #f3efe4;
+  --color-heading: #1f1f1f;
+  --color-muted: #6b6b6b;
+  --color-line: #e5e2da;
+
+  /* Fonts */
+  --font-sans: "Archivo", sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+
+  /* Animations */
+  --animate-fade-up: fade-up 0.8s ease-out both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* =====================================================
+   BASE: default look of plain HTML tags
+===================================================== */
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply min-h-screen min-w-[320px] bg-white font-sans text-base text-heading antialiased;
+  }
+
+  body.menu-open {
+    @apply overflow-hidden;
+  }
+
+  /* Headings: serif font, semibold, tight line height */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif font-semibold leading-tight text-heading;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+
+  /* Images never overflow their box */
+  img {
+    @apply block max-w-full;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+
+  /* Form fields */
+  input,
+  textarea,
+  select {
+    @apply w-full rounded-lg border border-line bg-white px-4 py-3 text-sm text-heading outline-none transition placeholder:text-muted/70 focus:border-secondary focus:ring-4 focus:ring-secondary/15;
+  }
+
+  textarea {
+    @apply min-h-36 resize-y;
+  }
+
+  ::selection {
+    @apply bg-secondary text-dark;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-secondary;
+  }
+}
+
+/* =====================================================
+   COMPONENTS: reusable style classes
+===================================================== */
+@layer components {
+  /* Layout */
+  .container-site {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  /* Text styles: size + font + transform + color together */
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.2em] text-secondary;
+  }
+
+  .heading-hero {
+    @apply text-4xl text-white sm:text-5xl lg:text-7xl;
+  }
+
+  .heading-section {
+    @apply text-3xl md:text-5xl;
+  }
+
+  .text-lead {
+    @apply text-base text-muted md:text-lg;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium uppercase tracking-wide text-heading transition hover:text-secondary;
+  }
+
+  /* Buttons */
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-secondary px-6 py-3 text-sm font-semibold uppercase tracking-wide text-dark transition hover:bg-white;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-white/60 px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition hover:border-secondary hover:text-secondary;
+  }
+  /* Decorative */
+  .gold-line {
+    @apply h-0.5 w-16 bg-secondary;
+  }
+
+  .card-hover {
+    @apply transition duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
+
+  /* Image zoom on hover: wrap an <img> in this */
+  .image-hover {
+    @apply overflow-hidden;
+  }
+  .image-hover img {
+    @apply h-full w-full object-cover transition-transform duration-500;
+  }
+  .image-hover:hover img {
+    @apply scale-105;
+  }
+
+  /* Dark gradient over hero images so text stays readable */
+  .hero-overlay {
+    @apply absolute inset-0 bg-linear-to-r from-dark/85 via-dark/55 to-dark/10;
+  }
+}
