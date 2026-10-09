@@ -122,7 +122,7 @@ export default function Facilities() {
               Campus Facilities
             </p>
 
-            <h1 className="mt-3 text-4xl font-bold leading-tight sm:text-5xl">
+            <h1 className="mt-3 text-4xl font-bold text-amber-50 leading-tight sm:text-5xl">
               Everything You Need to Learn & Grow
             </h1>
 

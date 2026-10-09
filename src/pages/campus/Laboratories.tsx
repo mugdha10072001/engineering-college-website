@@ -104,7 +104,7 @@ export default function Laboratories() {
               Practical Learning
             </p>
 
-            <h1 className="mt-3 text-4xl font-bold leading-tight sm:text-5xl">
+            <h1 className="mt-3 text-4xl text-amber-50 font-bold leading-tight sm:text-5xl">
               Modern Laboratories
             </h1>
 

@@ -109,7 +109,7 @@ export default function Departments() {
               Academic Departments
             </p>
 
-            <h1 className="mt-3 text-4xl font-bold sm:text-5xl">
+            <h1 className="mt-3 text-4xl text-amber-50 font-bold sm:text-5xl">
               Explore Our Departments
             </h1>
 

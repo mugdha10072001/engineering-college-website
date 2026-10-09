@@ -1,13 +1,7 @@
 import { useState } from "react";
 import type { FormEvent } from "react";
 
-import {
-  Clock3,
-  Mail,
-  MapPin,
-  Phone,
-  Send,
-} from "lucide-react";
+import { Clock3, Mail, MapPin, Phone, Send } from "lucide-react";
 
 import Breadcrumb from "../components/common/Breadcrumb";
 import Container from "../components/common/Container";
@@ -41,13 +35,13 @@ export default function Contact() {
               Get in Touch
             </p>
 
-            <h1 className="mt-3 text-4xl font-bold sm:text-5xl">
+            <h1 className="mt-3 text-amber-50 text-4xl font-bold sm:text-5xl">
               Contact Our College
             </h1>
 
             <p className="mt-5 text-lg leading-8 text-slate-300">
-              Have a question about admissions, academics, placements or
-              campus facilities? Our team is here to help.
+              Have a question about admissions, academics, placements or campus
+              facilities? Our team is here to help.
             </p>
           </div>
         </Container>
@@ -75,9 +69,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <h3 className="font-bold text-slate-900">
-                      Campus Address
-                    </h3>
+                    <h3 className="font-bold text-slate-900">Campus Address</h3>
 
                     <p className="mt-1 text-sm leading-6 text-slate-600">
                       ABC Engineering College
@@ -96,9 +88,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <h3 className="font-bold text-slate-900">
-                      Phone
-                    </h3>
+                    <h3 className="font-bold text-slate-900">Phone</h3>
 
                     <a
                       href="tel:+919999999999"
@@ -116,9 +106,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <h3 className="font-bold text-slate-900">
-                      Email
-                    </h3>
+                    <h3 className="font-bold text-slate-900">Email</h3>
 
                     <a
                       href="mailto:info@examplecollege.edu"
@@ -136,9 +124,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <h3 className="font-bold text-slate-900">
-                      Office Hours
-                    </h3>
+                    <h3 className="font-bold text-slate-900">Office Hours</h3>
 
                     <p className="mt-1 text-sm leading-6 text-slate-600">
                       Monday – Friday: 9:00 AM – 5:00 PM
@@ -184,10 +170,7 @@ export default function Contact() {
                   </button>
                 </div>
               ) : (
-                <form
-                  onSubmit={handleSubmit}
-                  className="space-y-5"
-                >
+                <form onSubmit={handleSubmit} className="space-y-5">
                   {/* Name + Email */}
                   <div className="grid gap-5 sm:grid-cols-2">
                     <div>
@@ -265,25 +248,15 @@ export default function Contact() {
                         Select a subject
                       </option>
 
-                      <option value="admissions">
-                        Admissions
-                      </option>
+                      <option value="admissions">Admissions</option>
 
-                      <option value="academics">
-                        Academics
-                      </option>
+                      <option value="academics">Academics</option>
 
-                      <option value="placements">
-                        Placements
-                      </option>
+                      <option value="placements">Placements</option>
 
-                      <option value="facilities">
-                        Facilities
-                      </option>
+                      <option value="facilities">Facilities</option>
 
-                      <option value="general">
-                        General Enquiry
-                      </option>
+                      <option value="general">General Enquiry</option>
                     </select>
                   </div>
 
@@ -322,8 +295,10 @@ export default function Contact() {
       </section>
 
       {/* =========================
-          MAP SECTION
-      ========================== */}
+     
+{/* ==========================
+    MAP SECTION
+========================== */}
       <section className="bg-slate-50 py-16">
         <Container>
           <SectionHeading
@@ -333,25 +308,37 @@ export default function Contact() {
             centered
           />
 
-          <div className="mt-10 flex min-h-[350px] items-center justify-center overflow-hidden rounded-3xl bg-slate-200">
-            <div className="px-6 text-center">
-              <MapPin
-                size={42}
-                className="mx-auto text-emerald-800"
-              />
+          <div className="mt-10 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-lg">
+            <iframe
+              title="ABC Engineering College location in Nagpur"
+              src="https://maps.google.com/maps?q=Nagpur%2C%20Maharashtra%2C%20India&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="400"
+              style={{ border: 0, display: "block" }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              aria-label="Google Map showing Nagpur, Maharashtra, India"
+            />
 
-              <h3 className="mt-4 text-xl font-bold text-slate-900">
-                ABC Engineering College
-              </h3>
+            <div className="flex flex-col gap-3 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
+              <div>
+                <h3 className="text-lg font-bold text-slate-900">
+                  ABC Engineering College
+                </h3>
+                <p className="mt-1 text-sm text-slate-600">
+                  Nagpur, Maharashtra, India
+                </p>
+              </div>
 
-              <p className="mt-2 text-sm text-slate-600">
-                Nagpur, Maharashtra, India
-              </p>
-
-              <p className="mt-4 text-xs text-slate-500">
-                Replace this area with your Google Maps or OpenStreetMap
-                embed before publishing.
-              </p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Nagpur%2C%20Maharashtra%2C%20India"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-lg bg-emerald-800 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-emerald-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-700 focus-visible:ring-offset-2"
+              >
+                Get Directions ↗
+              </a>
             </div>
           </div>
         </Container>

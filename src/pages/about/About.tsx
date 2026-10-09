@@ -35,7 +35,7 @@ export default function About() {
               About Our Institution
             </p>
 
-            <h1 className="mt-3 text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
+            <h1 className="mt-3 text-4xl font-bold text-amber-50 leading-tight sm:text-5xl lg:text-6xl">
               Building Engineers.
               <br />
               Creating Leaders.

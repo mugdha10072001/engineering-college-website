@@ -102,7 +102,7 @@ export default function Footer() {
 
             {/* Quick Links */}
             <div>
-              <h3 className="font-serif text-2xl font-semibold">
+              <h3 className="text-white font-serif text-2xl font-semibold">
                 Quick Links
               </h3>
 
@@ -126,7 +126,7 @@ export default function Footer() {
 
             {/* Academics */}
             <div>
-              <h3 className="font-serif text-2xl font-semibold">
+              <h3 className="font-serif text-white text-2xl font-semibold">
                 Academics
               </h3>
 
@@ -150,7 +150,7 @@ export default function Footer() {
 
             {/* Contact */}
             <div>
-              <h3 className="font-serif text-2xl font-semibold">
+              <h3 className="font-serif text-white text-2xl font-semibold">
                 Contact Us
               </h3>
 

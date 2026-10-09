@@ -73,7 +73,7 @@ export default function Notices() {
               Official Announcements
             </p>
 
-            <h1 className="mt-3 text-4xl font-bold sm:text-5xl">
+            <h1 className="mt-3 text-amber-50 text-4xl font-bold sm:text-5xl">
               College Notices
             </h1>
 

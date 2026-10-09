@@ -97,7 +97,7 @@ export default function Placements() {
               Training & Placement
             </p>
 
-            <h1 className="mt-3 text-4xl font-bold leading-tight sm:text-5xl">
+            <h1 className="mt-3 text-4xl text-amber-50 font-bold leading-tight sm:text-5xl">
               Building Careers Beyond the Classroom
             </h1>
 
@@ -301,7 +301,7 @@ export default function Placements() {
       <section className="py-16 sm:py-20">
         <Container>
           <div className="overflow-hidden rounded-3xl bg-emerald-950 px-6 py-12 text-center text-white sm:px-12">
-            <h2 className="text-3xl font-bold sm:text-4xl">
+            <h2 className="text-3xl text-amber-50 font-bold sm:text-4xl">
               Start Building Your Career
             </h2>
 
@@ -323,7 +323,7 @@ export default function Placements() {
               <Button
                 to="/contact"
                 variant="outline"
-                size="lg"
+                size="lg" className="text-amber-50!"
               >
                 Contact Placement Cell
               </Button>
