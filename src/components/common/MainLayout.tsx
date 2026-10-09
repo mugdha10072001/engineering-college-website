@@ -5,7 +5,6 @@ import { Outlet, useLocation } from "react-router-dom";
 // import Header from "./Header";
 import Header from "../layout/Header";
 import Footer from "../layout/Footer";
-import AnnouncementBar from "../layout/AnnouncementBar";
 import ScrollToTop from "../common/ScrollToTop";
 
 export default function MainLayout() {
@@ -28,7 +27,6 @@ export default function MainLayout() {
         Skip to main content
       </a>
 
-      {/* <AnnouncementBar /> */}
 
       <Header />
 
